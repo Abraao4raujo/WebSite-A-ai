@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Açai Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+      <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </header>
+    <div class="content">
+      <div class="textBox">
+        <h2>Não é apenas uma Fruta,<br>é <span class="letra">AÇAI</span></h2>
+        <p>O açaí é um fruto brasileiro cultivado predominantemente na região amazônica. Com cor escura, que vai do roxo ao preto, o fruto arredondado nasce em cachos e, na maioria das vezes, em locais com solos mais úmidos ou alagados.
+          <br>
+        Mesmo sendo um fruto característico da Região Norte do país, o açaí se popularizou nacionalmente e é utilizado de diversas formas na culinária brasileira, já que possui muitas propriedades nutricionais.</p>
+        <a href="#" class="lerMais">Ler mais</a>
+      </div>
+      <div class="imgBox">
+        <img src="img/img1.png" alt="" class="acai">
+      </div>
+    </div>
+    <ul class="thumb">
+      <li><img src="img/thumb1.png" onclick="imgSlider('img/img1.png');changeCircleColor('#8C3274')"></li>
+      <li><img src="img/thumb2.png" onclick="imgSlider('img/img2.png');changeCircleColor('#D95995')"></li>
+      <li><img src="img/thumb3.png" onclick="imgSlider('img/img3.png');changeCircleColor('#400207')"></li>
+    </ul>
+    <ul class="sci">
+      <li><a href="#"><img src="img/facebook.png" alt=""></a></li>
+      <li><a href="#"><img src="img/twitter.png" alt=""></a></li>
+      <li><a href="#"><img src="img/instagram.png" alt=""></a></li>
+    </ul>
+  </section>
+  
+  <script type="text/javascript">
+    function imgSlider(anything){
+      document.querySelector('.acai').src = anything;
+    }
+    function changeCircleColor(color){
+      const circle = document.querySelector(".circle")
+      const letra = document.querySelector(".letra")
+      const lerMais = document.querySelector(".lerMais")
+      circle.style.background = color;
+      letra.style.color = color;
+      lerMais.style.background = color;
+    }
+  </script>
+</body>
+</html>
