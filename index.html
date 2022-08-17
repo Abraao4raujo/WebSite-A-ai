@@ -12,7 +12,8 @@
     <div class="circle"></div>
     <header>
       <a href="#"><img src="img/logo.png" alt="" class="logo"></a>
-      <ul>
+      <div class="toggle" onclick="toggleMenu()"></div>
+      <ul class="navigation">
         <li><a href="#">Home</a></li>
         <li><a href="#">Menu</a></li>
         <li><a href="#">Contato</a></li>
@@ -50,9 +51,17 @@
       const circle = document.querySelector(".circle")
       const letra = document.querySelector(".letra")
       const lerMais = document.querySelector(".lerMais")
+      const menu = document.querySelector(".sci")
       circle.style.background = color;
       letra.style.color = color;
       lerMais.style.background = color;
+      menu.style.background = color
+    }
+    function toggleMenu(){
+      var menuToggle = document.querySelector('.toggle')
+      var navigation = document.querySelector('.navigation')
+      menuToggle.classList.toggle('active')
+      navigation.classList.toggle('active')
     }
   </script>
 </body>
